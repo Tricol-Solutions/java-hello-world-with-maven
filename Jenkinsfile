@@ -58,7 +58,15 @@ pipeline{
             }
         }
         stage("Testing Stage"){
+            environment{
+                TEST_NAME = "name of testing"
+            }
             parallel{
+                stage("Testing"){
+                    steps{
+                        sh 'echo "$TEST_NAME"'
+                    }
+                }
                 stage("Test on Windows"){
                     agent {label "windows-machine"}
                     steps{
