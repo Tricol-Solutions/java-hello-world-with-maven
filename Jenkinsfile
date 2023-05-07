@@ -40,7 +40,15 @@ pipeline{
                 git "$GIT_REPO"
             }
             post{
-                sh 'echo "Clone Successful"'
+                success{
+                    sh 'echo "Clone Successful"'
+                }
+                always{
+                    sh 'echo "Welcome To Pipeline"'
+                }
+                failure{
+                    sh 'echo "Cloning Failed. Sending Notification"'
+                }
             }
         }
         stage("Build"){
