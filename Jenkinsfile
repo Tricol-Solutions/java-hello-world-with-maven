@@ -33,6 +33,7 @@ pipeline{
     agent any
     environment {
         GIT_REPO = "https://github.com/Tricol-Solutions/java-hello-world-with-maven.git"
+        TEST_NAME = "Pipeline-env"
     }
     stages{
         stage('Clone'){
@@ -59,7 +60,7 @@ pipeline{
         }
         stage("Testing Stage"){
             environment{
-                TEST_NAME = "name of testing"
+                TEST_NAME = "stage-env"
             }
             parallel{
                 stage("Testing"){
