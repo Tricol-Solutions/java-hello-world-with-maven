@@ -60,13 +60,13 @@ pipeline{
         stage("Testing Stage"){
             parallel{
                 stage("Test on Windows"){
-                    agent "windows-machine"
+                    agent {label "windows-machine"}
                     steps{
                         sh 'echo "Substage 1"'
                     }
                 }
                 stage("Test on Linux"){
-                    agent "linux-machine"
+                    agent {label "linux-machine"}
                     steps{
                         sh 'echo "Substage 2"'
                     }
