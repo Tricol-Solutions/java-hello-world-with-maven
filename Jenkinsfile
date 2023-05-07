@@ -38,6 +38,7 @@ pipeline{
         stage('Clone'){
             steps{
                 git "$GIT_REPO"
+                sh 'exit 0'
             }
             post{
                 success{
