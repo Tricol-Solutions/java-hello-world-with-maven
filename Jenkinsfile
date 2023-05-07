@@ -61,12 +61,12 @@ pipeline{
             parallel{
                 stage("Sub Stage 1"){
                     steps{
-                        sh 'echo "Substage 1'
+                        sh 'echo "Substage 1"'
                     }
                 }
                 stage("Sub Stage 2"){
                     steps{
-                        sh 'echo "Substage 2'
+                        sh 'echo "Substage 2"'
                     }
                 }
             }
