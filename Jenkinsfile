@@ -40,5 +40,10 @@ pipeline{
                 git "$GIT_REPO"
             }
         }
+        stage("Build"){
+            steps{
+                sh 'mvn clean install'
+            }
+        }
     }
 }
