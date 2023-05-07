@@ -58,4 +58,9 @@ pipeline{
             }
         }
     }
+    post{
+        always{
+            sh 'echo "Running for Pipeline"'
+        }
+    }
 }
