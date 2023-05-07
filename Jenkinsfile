@@ -37,7 +37,7 @@ pipeline{
     stages{
         stage('Clone'){
             steps{
-                git $GIT_REPO
+                git "$GIT_REPO"
             }
         }
     }
