@@ -69,13 +69,13 @@ pipeline{
                     }
                 }
                 stage("Test on Windows"){
-                    agent {label "windows-machine"}
+                    // agent {label "windows-machine"}
                     steps{
                         sh 'echo "Substage 1"'
                     }
                 }
                 stage("Test on Linux"){
-                    agent {label "linux-machine"}
+                    // agent {label "linux-machine"}
                     steps{
                         sh 'echo "Substage 2"'
                     }
