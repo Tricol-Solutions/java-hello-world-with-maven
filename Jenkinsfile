@@ -57,14 +57,16 @@ pipeline{
                 sh 'mvn clean install'
             }
         }
-        stage("Tricol Stage"){
+        stage("Testing Stage"){
             parallel{
-                stage("Sub Stage 1"){
+                stage("Test on Windows"){
+                    agent "windows-machine"
                     steps{
                         sh 'echo "Substage 1"'
                     }
                 }
-                stage("Sub Stage 2"){
+                stage("Test on Linux"){
+                    agent "linux-machine"
                     steps{
                         sh 'echo "Substage 2"'
                     }
