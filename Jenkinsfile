@@ -57,7 +57,7 @@ pipeline{
                 sh 'mvn clean install'
             }
         }
-        stage("Parallel Stage"){
+        stage("Tricol Stage"){
             parallel{
                 stage("Sub Stage 1"){
                     steps{
