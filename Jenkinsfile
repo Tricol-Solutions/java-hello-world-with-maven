@@ -39,6 +39,9 @@ pipeline{
             steps{
                 git "$GIT_REPO"
             }
+            post{
+                sh 'echo "Clone Successful"'
+            }
         }
         stage("Build"){
             steps{
